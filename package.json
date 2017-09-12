@@ -2,9 +2,10 @@
   "name": "tutorial",
   "version": "1.0.0",
   "description": "A tutorial for students to use the tooling",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "bundle": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/PathwayCommons/student-tutorial/issues"
   },
-  "homepage": "https://github.com/PathwayCommons/student-tutorial#readme"
+  "homepage": "https://github.com/PathwayCommons/student-tutorial#readme",
+  "devDependencies": {
+    "webpack": "^3.5.6"
+  }
 }
