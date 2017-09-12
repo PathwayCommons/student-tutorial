@@ -1,0 +1,13 @@
+button {
+  background-color: red;
+  -webkit-box-shadow: 0 8px black;
+          box-shadow: 0 8px black
+}
+
+button:active {
+  background-color: blue;
+}
+
+body {
+  background-color: cyan;
+}
