@@ -2,15 +2,16 @@
   "name": "tutorial",
   "version": "1.0.0",
   "description": "A tutorial for students to use the tooling",
-  "main": "./index.js",
   "scripts": {
     "test": "mocha",
     "bundle-js": "webpack",
-    "bundle-css": "postcss ./index.css -o bundle.css",
+    "bundle-css": "postcss style/index.css -o build/bundle.css",
     "bundle": "run-p bundle-js bundle-css",
-    "watch-js": "webpack-dev-server",
-    "watch-css": "postcss --watch ./index.css -o bundle.css",
-    "watch": "run-p watch-js watch-css"
+    "watch-js": "webpack --watch",
+    "watch-css": "postcss --watch style/index.css -o build/bundle.css",
+    "watch": "run-p watch-js watch-css dev-server",
+    "dev-server": "browser-sync --server --files build index.html",
+    "start": "run-s watch"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
     "postcss": "^6.0.11",
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",

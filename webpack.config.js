@@ -1,10 +1,8 @@
-const pkg = require('./package.json');
-
 let conf = {
-  entry: pkg.main,
+  entry: './src/index.js',
 
   output: {
-    filename: 'bundle.js'
+    filename: './build/bundle.js'
   },
 
   module: {
