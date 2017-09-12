@@ -1,0 +1,19 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "A tutorial for students to use the tooling",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PathwayCommons/student-tutorial.git"
+  },
+  "author": "Me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PathwayCommons/student-tutorial/issues"
+  },
+  "homepage": "https://github.com/PathwayCommons/student-tutorial#readme"
+}
