@@ -23,14 +23,14 @@ class Component extends React.Component {
     return h('button.component', {
       id: this.props.foo,
       onClick: event => this.click()
-    }, `Hello world ${clicks}!`);
+    }, `Hello JSX ${clicks}!`);
   }
 }
 
 window.addEventListener('DOMContentLoaded', function(){
   ReactDOM.render(
     h(Component, { foo: 'bar' }),
-    // <Component foo="bar"></Component>
+    // <Component foo="bar"></Component>,
     document.getElementById('root')
   );
 });
