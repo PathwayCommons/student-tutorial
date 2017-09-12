@@ -23,7 +23,7 @@ class Component extends React.Component {
     return h('button.component', {
       id: this.props.foo,
       onClick: event => this.click()
-    }, `Hello JSX ${clicks}!`);
+    }, `Hello JSX-C ${clicks}!`);
   }
 }
 
