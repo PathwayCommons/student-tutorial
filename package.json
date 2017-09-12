@@ -10,7 +10,7 @@
     "watch-js": "webpack --watch",
     "watch-css": "postcss --watch src/style/index.css -o build/bundle.css",
     "watch": "run-p watch-js watch-css dev-server",
-    "dev-server": "browser-sync --server --files build index.html",
+    "dev-server": "browser-sync start --server --files build index.html",
     "start": "run-s watch",
     "lint-css": "stylelint src/style/**/*.css",
     "lint-js": "eslint src",

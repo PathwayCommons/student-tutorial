@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const { env } = require('process');
 const isProd = env.NODE_ENV === 'production';
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -17,7 +18,16 @@ let conf = {
   },
 
   plugins: [
-    isProd ? new UglifyJSPlugin() : null
+    isProd ? new UglifyJSPlugin() : null,
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'deps',
+      filename: './build/deps.js',
+      minChunks( module ){
+        let context = module.context || '';
+
+        return context.indexOf('node_modules') >= 0;
+      }
+    })
   ].filter( isNonNil )
 };
 
